@@ -1,0 +1,158 @@
+/* General body styling */
+body {
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 50%, #11998e 100%);
+    color: #f4f4f4;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Container for content */
+#table, form, .container {
+    background: rgba(0,0,0,0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+    color: #00c9a7;
+    margin-bottom: 1rem;
+}
+
+/* Form labels and inputs */
+label {
+    display: block;
+    margin: 1rem 0 0.3rem 0;
+    color: #b2fefa;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #11998e;
+    border-radius: 6px;
+    background: #222;
+    color: #f4f4f4;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border: 1.5px solid #38ef7d;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+    color: #111;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s, color 0.2s;
+}
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #38ef7d 0%, #11998e 100%);
+    color: #fff;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+td, th {
+    padding: 1rem;
+    border-bottom: 1px solid #11998e;
+    text-align: left;
+    color: #f4f4f4;
+}
+
+tr {
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+tr:hover {
+    background: rgba(17, 153, 142, 0.15);
+}
+
+/* Avatar image */
+#avatarImage img, td img {
+    border-radius: 50%;
+    border: 2px solid #38ef7d;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    background: #111;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #table, form, .container {
+        padding: 1rem;
+        max-width: 98vw;
+    }
+    td, th {
+        padding: 0.5rem;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #00c9a7 0%, #11998e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* Profile form layout */
+.profile-form-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Make avatar image bigger */
+#avatarImage img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #38ef7d;
+    object-fit: cover;
+    background: #111;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Make form take remaining space */
+.profile-form-container form {
+    flex: 1;
+    min-width: 220px;
+}
